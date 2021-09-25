@@ -10,8 +10,8 @@ sudo dscl . -create /Users/luppilandia RealName $4
 sudo dscl . -create /Users/luppilandia UniqueID 1001
 sudo dscl . -create /Users/luppilandia PrimaryGroupID 80
 sudo dscl . -create /Users/luppilandia NFSHomeDirectory /Users/tcv
-sudo dscl . -passwd /Users/luppilandia-macos $1
-sudo dscl . -passwd /Users/luppilandia-macos $1
+sudo dscl . -passwd /Users/luppilandia LuppiLandia-MacOS
+sudo dscl . -passwd /Users/luppilandia LuppiLandia-MacOS
 sudo createhomedir -c -u luppilandia > /dev/null
 sudo dscl . -append /Groups/admin GroupMembership username
 
