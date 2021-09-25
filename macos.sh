@@ -4,14 +4,14 @@
 sudo mdutil -i off -a
 
 #Create new account
-sudo dscl . -create /Users/tcv
-sudo dscl . -create /Users/tcv UserShell /bin/bash
-sudo dscl . -create /Users/tcv RealName $4
-sudo dscl . -create /Users/tcv UniqueID 1001
-sudo dscl . -create /Users/tcv PrimaryGroupID 80
-sudo dscl . -create /Users/tcv NFSHomeDirectory /Users/tcv
-sudo dscl . -passwd /Users/tcv $1
-sudo dscl . -passwd /Users/tcv $1
+sudo dscl . -create /Users/luppilandia
+sudo dscl . -create /Users/luppilandia UserShell /bin/bash
+sudo dscl . -create /Users/luppilandia RealName $4
+sudo dscl . -create /Users/luppilandia UniqueID 1001
+sudo dscl . -create /Users/luppilandia PrimaryGroupID 80
+sudo dscl . -create /Users/luppilandia NFSHomeDirectory /Users/tcv
+sudo dscl . -passwd /Users/luppilandia $1
+sudo dscl . -passwd /Users/luppilandia $1
 sudo createhomedir -c -u tcv > /dev/null
 sudo dscl . -append /Groups/admin GroupMembership username
 
@@ -29,5 +29,5 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 brew install --cask ngrok
 
 #configure ngrok and start it
-ngrok authtoken $3
+ngrok authtoken 1wpSMz3jtKsCslT4sZQvUt5wgD8_32Dcn9pL7qW4PJHN2bvTk
 ngrok tcp 5900 --region=eu &
