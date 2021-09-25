@@ -10,9 +10,9 @@ sudo dscl . -create /Users/luppilandia RealName $4
 sudo dscl . -create /Users/luppilandia UniqueID 1001
 sudo dscl . -create /Users/luppilandia PrimaryGroupID 80
 sudo dscl . -create /Users/luppilandia NFSHomeDirectory /Users/tcv
-sudo dscl . -passwd /Users/luppilandia $1
-sudo dscl . -passwd /Users/luppilandia $1
-sudo createhomedir -c -u tcv > /dev/null
+sudo dscl . -passwd /Users/luppilandia-macos $1
+sudo dscl . -passwd /Users/luppilandia-macos $1
+sudo createhomedir -c -u luppilandia > /dev/null
 sudo dscl . -append /Groups/admin GroupMembership username
 
 #Enable VNC
