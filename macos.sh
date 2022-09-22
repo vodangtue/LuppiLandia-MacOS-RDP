@@ -12,13 +12,12 @@ sudo dscl . -create /Users/vdtue PrimaryGroupID 80
 sudo dscl . -create /Users/vdtue NFSHomeDirectory /Users/tcv
 sudo dscl . -passwd /Users/vdtue 1234
 sudo dscl . -passwd /Users/vdtue 1234
-sudo createhomedir -c -u luppilandia > /dev/null
+sudo createhomedir -c -u vdtue > /dev/null
 sudo dscl . -append /Groups/admin GroupMembership username
 
 #Enable VNC
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -allowAccessFor -allUsers -privs -all
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -clientopts -setvnclegacy -vnclegacy yes 
-sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -clientopts -setvncpw -vncpw vdtue1234
 
 echo $2 | perl -we 'BEGIN { @k = unpack "C*", pack "H*", "1734516E8BA8C5E2FF1C39567390ADCA"}; $_ = <>; chomp; s/^(.{8}).*/$1/; @p = unpack "C*", $_; foreach (@k) { printf "%02X", $_ ^ (shift @p || 0) }; print "\n"' | sudo tee /Library/Preferences/com.apple.VNCSettings.txt
 
